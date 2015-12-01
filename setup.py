@@ -842,11 +842,16 @@ if "bdist_msi" in sys.argv:
 
     version=".".join([str(v) for v in version])
 
-setup(name="apsw",
+setup(name="bayeslite-apsw",
       version=version,
-      description="Another Python SQLite Wrapper",
+      description="Another Python SQLite Wrapper -- bayeslite custom edition",
       long_description=\
 """A Python wrapper for the SQLite embedded relational database engine.
+
+WARNING: This is a bayeslite custom edition.  This is not the normal
+apsw.  It is a temporary kludge until the `apsw' package on pypi
+works.
+
 In contrast to other wrappers such as pysqlite it focuses on being
 a minimal layer over SQLite attempting just to translate the
 complete SQLite API into Python.""",
