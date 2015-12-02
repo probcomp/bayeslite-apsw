@@ -824,7 +824,12 @@ setup(name="bayeslite-apsw",
 
 WARNING: This is a bayeslite custom edition.  This is not the normal
 apsw.  It is a temporary kludge until the `apsw' package on pypi
-works.
+works.  This was customized by running::
+
+    python setup.py fetch --sqlite --version=3.8.0
+
+so that it includes a copy of a working version of sqlite3 instead of
+relying on whatever version your system may have installed.
 
 In contrast to other wrappers such as pysqlite it focuses on being
 a minimal layer over SQLite attempting just to translate the
