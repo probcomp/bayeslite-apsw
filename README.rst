@@ -2,7 +2,7 @@ APSW stands for Another Python SQLite Wrapper.
 
 WARNING: This is a bayeslite custom edition.  This is not the normal
 apsw.  It is a temporary kludge until the `apsw' package on pypi
-works.  This was customized by running
+works.  This was customized by running::
 
     python setup.py fetch --sqlite --version=3.9.2
 
