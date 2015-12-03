@@ -28,3 +28,6 @@ include tools/apswtrace.py
 # shell is not needed at runtime - we compile it into the C source
 include tools/shell.py
 include tests.py
+
+# sqlite3 source
+include sqlite3/sqlite3.c
