@@ -843,7 +843,7 @@ if "bdist_msi" in sys.argv:
     version=".".join([str(v) for v in version])
 
 setup(name="bayeslite-apsw",
-      version=version,
+      version=version + '+bayeslite1',
       description="Another Python SQLite Wrapper -- bayeslite custom edition",
       long_description=\
 """A Python wrapper for the SQLite embedded relational database engine.
