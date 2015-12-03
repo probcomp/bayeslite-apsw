@@ -3000,7 +3000,7 @@ class APSW(unittest.TestCase):
         # there are more than zero entries.
         v=apsw.compile_options
         self.assertEqual(type(v), tuple)
-        self.assertTrue(len(v)>1)
+        self.assertTrue(len(v)>=1)
 
     def testIssue4(self):
         "Issue 4: Error messages and SQLite ticket 3063"
