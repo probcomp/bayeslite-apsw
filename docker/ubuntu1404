@@ -1,0 +1,15 @@
+FROM            ubuntu:14.04
+MAINTAINER      MIT Probabilistic Computing Project
+
+RUN             apt-get update -qq
+RUN             apt-get upgrade -qq
+RUN             apt-get install -qq build-essential
+RUN             apt-get install -qq python
+RUN             apt-get install -qq python-dev
+
+ADD             . /bayeslite-apsw
+WORKDIR         /bayeslite-apsw
+RUN             python setup.py build
+RUN             ./pythenv.sh python setup.py test
+RUN             python setup.py sdist
+RUN             python setup.py bdist
