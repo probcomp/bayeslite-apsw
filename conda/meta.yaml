@@ -1,0 +1,31 @@
+package:
+  name: apsw
+  version: "0.1"
+
+source:
+  path: ../
+
+build:
+  script: python setup.py install
+
+requirements:
+  build:
+    - git
+    - python 2.7.*
+  run:
+    - sqlite 3.9.2
+
+test:
+  source_files:
+    - setup.py
+    - src
+    - tests.py
+  requires:
+    - python 2.7.*
+  commands:
+    - python setup.py test
+
+about:
+  home: https://github.com/probcomp/bayeslite-apsw
+  license: Apache
+  license_file: LICENSE
