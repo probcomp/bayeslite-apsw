@@ -2,7 +2,7 @@ language: python
 dist: trusty
 branches:
   only:
-  - travis
+  - conda
 
 python:
   - 2.7
