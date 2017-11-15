@@ -5,7 +5,7 @@ set -ev
 if [ -n "${TRAVIS_TAG}" ]; then
   conda install anaconda-client
   # if tag didn't come from master, add the "dev" label
-  if [ $(git branch --contains tags/${TRAVIS_TAG}) = "master" ]; then
+  if [ $(git branch --contains tags/${TRAVIS_TAG} --format='%(refname:short)') = "master" ]; then
     anaconda -t ${CONDA_UPLOAD_TOKEN} upload -u ${CONDA_USER} ~/miniconda/conda-bld/linux-64/apsw-*.tar.bz2 --force
   else
     anaconda -t ${CONDA_UPLOAD_TOKEN} upload -u ${CONDA_USER} -l dev ~/miniconda/conda-bld/linux-64/apsw-*.tar.bz2 --force
