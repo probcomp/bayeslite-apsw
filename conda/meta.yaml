@@ -16,6 +16,10 @@ requirements:
     - sqlite 3.9.2
 
 test:
+  source_files:
+    - setup.py
+    - src
+    - tests.py
   requires:
     - python 2.7.*
   commands:
