@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ev
+set -evx
 
 # if this build was invoked by a tag or a cron, then upload the package. otherwise exit.
 if [ -n "${TRAVIS_TAG}" ]; then
